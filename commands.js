@@ -12,7 +12,7 @@ const commandRegister = (client) => {
     ]
         .map(command => command.toJSON());
 
-    const rest = new REST({ version: '9' }).setToken('ODU0ODU4Mzg1NTc1NjQxMTI4.YMqC6Q.thGz55ioNRilJeuulqFpoJhLgAE');
+    const rest = new REST({ version: '9' }).setToken('process.env.TOKEN');
 
     try {
         console.log('Started refreshing application (/) commands.');
