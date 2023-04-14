@@ -3,24 +3,7 @@ const Discord = require('discord.js');
 
 require('dotenv').config()
 const client = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]});
-const prefix = '$';
-const channel1 = '872889598299230278'; //this is the testing channel
-const channel2 = '546134726490980363'; //this is the spoiler images channel
-const channel3 = '477207127216357386'; //this is the community content channel
-publishcount1 = 0;
-publishcount2 = 0;
-publishcount3 = 0;
-let current = new Date();
-cTime11 = 0;
-cTime12 = 0;
-cTime21 = 0;
-cTime22 = 0;
-cTime31 = 0;
-cTime32 = 0;
-var mulldrifter = 7;
-var baneslayer = 2;
-var itdepends = 4;
-var context = 0;
+
 const fs = require('fs');
  
 client.commands = new Discord.Collection();
@@ -36,185 +19,15 @@ for(const file of commandFiles){
 
 client.once('ready',()=>{
     console.log('Cube time!')
-    client.user.setActivity("Drafting a 360 Uncube"); 
+    client.user.setActivity("Deciding on my p1p1"); 
 });
 
 
-client.on('message', message =>{
+
+// Old message command content, no longer needed
+/* client.on('messageCreate', async message =>{
     const { channel } = message
 
-    if (publishcount1 === 11) {
-        cTime12 = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
-        if (cTime12 - cTime11 >= 1){
-            publishcount1 === 0;
-        }
-        else{
-            return;
-        }
-    }
-    if (publishcount2 === 11) {
-        cTime22 = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
-        if (cTime22 - cTime21 >= 1){
-            publishcount2 === 0;
-        }
-        else{
-            return;
-        }
-    }
-    if (publishcount3 === 11) {
-        cTime32 = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
-        if (cTime32 - cTime31 >= 1){
-            publishcount3 === 0;
-        }
-        else{
-            return;
-        }
-    }
-
-    if (channel.type === 'news' && channel.id === '872889598299230278') {
-        //add a 2nd time veriable to compare the first one to, when the two subtract to equal 1, reset the publishcount, may need to pull messages from any channel to make the timer consistent.
-        publishcount1 = publishcount1 + 1;
-        
-        if(publishcount1 === 11){
-            cTime11 = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
-            console.log('The time testing channel hit 10 was: ' +cTime11);
-            return;
-        }
-        else{
-            console.log('publish count: ' + publishcount1);
-            message.crosspost();
-        }
-        
-    }
-    if (channel.type === 'news' && channel.id === '546134726490980363') {
-        //add a 2nd time veriable to compare the first one to, when the two subtract to equal 1, reset the publishcount, may need to pull messages from any channel to make the timer consistent.
-        publishcount2 = publishcount2 + 1;
-        
-        if(publishcount2 === 11){
-            cTime21 = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
-            console.log('The time spoiler images channel hit 10 was: ' +cTime21);
-            return;
-        }
-        else{
-            console.log('publish count: ' + publishcount2);
-            message.crosspost();
-        }
-        
-    }
-    if (channel.type === 'news' && channel.id === '477207127216357386') {
-        //add a 2nd time veriable to compare the first one to, when the two subtract to equal 1, reset the publishcount, may need to pull messages from any channel to make the timer consistent.
-        publishcount3 = publishcount3 + 1;
-        
-        if(publishcount3 === 11){
-            cTime31 = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
-            console.log('The time community content channel hit 10 was: ' +cTime31);
-            return;
-        }
-        else{
-            console.log('publish count: ' + publishcount3);
-            message.crosspost();
-        }
-        
-    }
-
-    let mulldrifterbad = ['mulldrifter'];
-    let foundInText1 = false;
-    for (var i in mulldrifterbad) {
-        if (message.content.toLowerCase().includes(mulldrifterbad[i].toLowerCase())) foundInText1 = true;
-    }
-        if (foundInText1) {
-    
-            var number1 = 2;
-            var calloutnumber1 = Math.floor(Math.random()*(number1 - 1 + 1))+1;
-            if(calloutnumber1 === 1)
-            {
-                message.channel.send("We don't talk about value around here");
-                mulldrifter = mulldrifter + 1;
-            }
-            if(calloutnumber1 === 2)
-            {
-                message.channel.send("mulldrifter? I thought you said mulligan!");
-                mulldrifter = mulldrifter + 1;
-            }
-    }
-    
-    let banesbad = ['baneslayer'];
-    let foundInText2 = false;
-    for (var i in banesbad) {
-        if (message.content.toLowerCase().includes(banesbad[i].toLowerCase())) foundInText2 = true;
-    }
-    if (foundInText2) {
-    
-        var number2 = 2;
-        var calloutnumber2 = Math.floor(Math.random()*(number2 - 1 + 1))+1;
-        if(calloutnumber2 === 1)
-        {
-            message.channel.send("I'll have you know I enjoy watching my major mana investments eat removal");
-            baneslayer = baneslayer + 1;
-        }
-        if(calloutnumber2 === 2)
-        {
-            message.channel.send("If I untap with this so help me god!");
-            baneslayer = baneslayer + 1;
-        }
-    }
-    
-    let dependsbad = ['it depends'];
-    let foundInText3 = false;
-    for (var i in dependsbad) {
-        if (message.content.toLowerCase().includes(dependsbad[i].toLowerCase())) foundInText3 = true;
-    }
-    if (foundInText3) {
-    
-        var number3 = 3;
-        var calloutnumber3 = Math.floor(Math.random()*(number3 - 1 + 1))+1;
-        if(calloutnumber3 === 1)
-        {
-            message.channel.send("Protip: You can shortcut any sentence containing 'it depends' with 'Yes.'");
-            itdepends = itdepends + 1;
-        }
-        if(calloutnumber3 === 2)
-        {
-            message.channel.send("Protip: You can shortcut any sentence containing 'it depends' with 'No.'");
-            itdepends = itdepends + 1;
-        }
-        if(calloutnumber3 === 3)
-        {
-            message.channel.send("Who depends?");
-            itdepends = itdepends + 1;
-        }
-    }
-    let contextbad = ['context'];
-    let foundInText4 = false;
-    for (var i in contextbad) {
-        if (message.content.toLowerCase().includes(contextbad[i].toLowerCase())) foundInText4 = true;
-    }
-    if (foundInText4) {
-    
-        var number4 = 2;
-        var calloutnumber4 = Math.floor(Math.random()*(number4 - 1 + 1))+1;
-        if(calloutnumber4 === 1)
-        {
-            message.channel.send("One second, I need the context");
-            context = context + 1;
-        }
-        if(calloutnumber4 === 2)
-        {
-            message.channel.send("context?");
-            context = context + 1;
-        }
-      }
-    
-    
-    let blacklisted = ['fuck', 'shit', 'ass' ];
-    let foundInText = false;
-    for (var i in blacklisted) {
-        if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
-    }
-        if (foundInText) {
-    
-            message.channel.send("no cussing! This is a wholesome magic server!");
-        }
     if(!message.content.startsWith(prefix) || message.author.bot) return;
  
     const args = message.content.slice(prefix.length).split(/ +/);
@@ -245,10 +58,228 @@ client.on('message', message =>{
         .setTimestamp();
     message.channel.send(embed);
     }
+}); */
+
+Client.on('interactionCreate', async interaction => {
+    
+
+    if (interaction.isButton()) {
+      const buttonID = interaction.customId;
+      if (buttonID === '1') { 
+          const member = interaction.member; // get member from the interaction - person who clicked the button
+
+          
+
+          if (member.roles.cache.has('472500301279133697')) { // if they already have the role
+              member.roles.remove('472500301279133697'); // remove it
+              return interaction.reply({
+                  content: 'Successfully removed role!',
+                  ephemeral: true
+              });
+          } else { // if they don't have the role
+              member.roles.add('472500301279133697'); // add it
+              return interaction.reply({
+                  content: 'Successfully added role!',
+                  ephemeral: true
+              })
+          }
+      }
+      else if (buttonID === '2') { 
+        const member = interaction.member; // get member from the interaction - person who clicked the button
+
+        
+
+        if (member.roles.cache.has('763914397881466901')) { // if they already have the role
+            member.roles.remove('763914397881466901'); // remove it
+            return interaction.reply({
+                content: 'Successfully removed role!',
+                ephemeral: true
+            });
+        } else { // if they don't have the role
+            member.roles.add('763914397881466901'); // add it
+            return interaction.reply({
+                content: 'Successfully added role!',
+                ephemeral: true
+            })
+        }
+    }
+    else if (buttonID === '3') { 
+      const member = interaction.member; // get member from the interaction - person who clicked the button
+
+      
+
+      if (member.roles.cache.has('593883972652498968')) { // if they already have the role
+          member.roles.remove('593883972652498968'); // remove it
+          return interaction.reply({
+              content: 'Successfully removed role!',
+              ephemeral: true
+          });
+      } else { // if they don't have the role
+          member.roles.add('593883972652498968'); // add it
+          return interaction.reply({
+              content: 'Successfully added role!',
+              ephemeral: true
+          })
+      }
+  }
+  else if (buttonID === '4') { 
+    const member = interaction.member; // get member from the interaction - person who clicked the button
+
+    
+
+    if (member.roles.cache.has('603693326905901096')) { // if they already have the role
+        member.roles.remove('603693326905901096'); // remove it
+        return interaction.reply({
+            content: 'Successfully removed role!',
+            ephemeral: true
+        });
+    } else { // if they don't have the role
+        member.roles.add('603693326905901096'); // add it
+        return interaction.reply({
+            content: 'Successfully added role!',
+            ephemeral: true
+        })
+    }
+}
+else if (buttonID === '5') { 
+  const member = interaction.member; // get member from the interaction - person who clicked the button
+
+  
+
+  if (member.roles.cache.has('700804945699536916')) { // if they already have the role
+      member.roles.remove('700804945699536916'); // remove it
+      return interaction.reply({
+          content: 'Successfully removed role!',
+          ephemeral: true
+      });
+  } else { // if they don't have the role
+      member.roles.add('700804945699536916'); // add it
+      return interaction.reply({
+          content: 'Successfully added role!',
+          ephemeral: true
+      })
+  }
+}
+else if (buttonID === '6') { 
+  const member = interaction.member; // get member from the interaction - person who clicked the button
+
+  
+
+  if (member.roles.cache.has('578353610388406312')) { // if they already have the role
+      member.roles.remove('578353610388406312'); // remove it
+      return interaction.reply({
+          content: 'Successfully removed role!',
+          ephemeral: true
+      });
+  } else { // if they don't have the role
+      member.roles.add('578353610388406312'); // add it
+      return interaction.reply({
+          content: 'Successfully added role!',
+          ephemeral: true
+      })
+  }
+}
+else if (buttonID === '7') { 
+  const member = interaction.member; // get member from the interaction - person who clicked the button
+
+
+
+  if (member.roles.cache.has('757061544671445012')) { // if they already have the role
+      member.roles.remove('757061544671445012'); // remove it
+      return interaction.reply({
+          content: 'Successfully removed role!',
+          ephemeral: true
+      });
+  } else { // if they don't have the role
+      member.roles.add('757061544671445012'); // add it
+      return interaction.reply({
+          content: 'Successfully added role!',
+          ephemeral: true
+      })
+  }
+}
+else if (buttonID === '8') { 
+  const member = interaction.member; // get member from the interaction - person who clicked the button
+
+ 
+
+  if (member.roles.cache.has('873233003705426001')) { // if they already have the role
+      member.roles.remove('873233003705426001'); // remove it
+      return interaction.reply({
+          content: 'Successfully removed role!',
+          ephemeral: true
+      });
+  } else { // if they don't have the role
+      member.roles.add('873233003705426001'); // add it
+      return interaction.reply({
+          content: 'Successfully added role!',
+          ephemeral: true
+      })
+  }
+}
+else if (buttonID === '9') { 
+  const member = interaction.member; // get member from the interaction - person who clicked the button
+
+
+
+  if (member.roles.cache.has('903010664564555796')) { // if they already have the role
+      member.roles.remove('903010664564555796'); // remove it
+      return interaction.reply({
+          content: 'Successfully removed role!',
+          ephemeral: true
+      });
+  } else { // if they don't have the role
+      member.roles.add('903010664564555796'); // add it
+      return interaction.reply({
+          content: 'Successfully added role!',
+          ephemeral: true
+      })
+  }
+}
+else if (buttonID === '10') { 
+  const member = interaction.member; // get member from the interaction - person who clicked the button
+
+
+
+  if (member.roles.cache.has('956587965704962098')) { // if they already have the role
+      member.roles.remove('956587965704962098'); // remove it
+      return interaction.reply({
+          content: 'Successfully removed role!',
+          ephemeral: true
+      });
+  } else { // if they don't have the role
+      member.roles.add('956587965704962098'); // add it
+      return interaction.reply({
+          content: 'Successfully added role!',
+          ephemeral: true
+      })
+  }
+}
+else if (buttonID === '11') { 
+  const member = interaction.member; // get member from the interaction - person who clicked the button
+
+
+
+  if (member.roles.cache.has('1025577232212701305')) { // if they already have the role
+      member.roles.remove('1025577232212701305'); // remove it
+      return interaction.reply({
+          content: 'Successfully removed role!',
+          ephemeral: true
+      });
+  } else { // if they don't have the role
+      member.roles.add('1025577232212701305'); // add it
+      return interaction.reply({
+          content: 'Successfully added role!',
+          ephemeral: true
+      })
+  }
+}
+}
 });
 
 
 
 
+ee
 
-client.login(process.env.TOKEN)
+client.login(process.env.TOKEN);
