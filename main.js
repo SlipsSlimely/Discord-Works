@@ -1,12 +1,12 @@
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
-
+const {AttachmentBuilder, MessageEmbed, Intents, time, ActionRowBuilder, MessageButton, ButtonStyle, MessageActionRow} = require('discord.js');
 require('dotenv').config()
-const client = new Discord.Client({partials: ["MESSAGE", "CHANNEL", "REACTION"]});
+const Client = new Discord.Client({intents: [Intents.FLAGS.GUILDS, "GUILDS", 'GUILD_MEMBERS', "GUILD_MESSAGES"]});
 
 const fs = require('fs');
  
-client.commands = new Discord.Collection();
+Client.commands = new Discord.Collection();
 
 
 
@@ -14,18 +14,18 @@ const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith(
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
  
-    client.commands.set(command.name, command);
+    Client.commands.set(command.name, command);
 }
 
-client.once('ready',()=>{
+Client.once('ready',()=>{
     console.log('Cube time!')
-    client.user.setActivity("Deciding on my p1p1"); 
+    Client.user.setActivity("Deciding on my p1p1"); 
 });
 
 
 
 // Old message command content, no longer needed
-/* client.on('messageCreate', async message =>{
+/* Client.on('messageCreate', async message =>{
     const { channel } = message
 
     if(!message.content.startsWith(prefix) || message.author.bot) return;
@@ -34,16 +34,16 @@ client.once('ready',()=>{
     const command = args.shift().toLowerCase();
  
     if(command === 'ping'){
-        client.commands.get('ping').execute(message, args);
+        Client.commands.get('ping').execute(message, args);
     } 
     else if(command === 'reactionrole'){
-        client.commands.get('reactionrole').execute(message, args, Discord, client);
+        Client.commands.get('reactionrole').execute(message, args, Discord, Client);
     }
     else if(command === 'genderrole'){
-        client.commands.get('genderrole').execute(message, args, Discord, client);
+        Client.commands.get('genderrole').execute(message, args, Discord, Client);
     }
     else if(command === 'timerole'){
-        client.commands.get('timerole').execute(message, args, Discord, client);
+        Client.commands.get('timerole').execute(message, args, Discord, Client);
     }
     else if (command == 'aprilfools'){
         let embed = new Discord.MessageEmbed()
@@ -598,4 +598,4 @@ Client.on("messageCreate", async message => {
 
 
 
-client.login(process.env.TOKEN);
+Client.login(process.env.TOKEN);

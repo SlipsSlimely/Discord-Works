@@ -1,7 +1,7 @@
 module.exports = {
     name: 'reactionrole',
     description: "Sets up a reaction role message!",
-    async execute(message, args, Discord, client) {
+    async execute(message, args, Discord, Client) {
         const channel = '855183208962719824';
         const poweredRole = message.guild.roles.cache.find(role => role.name === "Powered");
         const unpoweredtradRole = message.guild.roles.cache.find(role => role.name === "Unpowered Traditional");
@@ -58,7 +58,7 @@ module.exports = {
         messageEmbed.react(draftEmoji);
 
  
-        client.on('messageReactionAdd', async (reaction, user) => {
+        Client.on('messageReactionAdd', async (reaction, user) => {
             if (reaction.message.partial) await reaction.message.fetch();
             if (reaction.partial) await reaction.fetch();
             if (user.bot) return;
@@ -98,7 +98,7 @@ module.exports = {
  
         });
  
-        client.on('messageReactionRemove', async (reaction, user) => {
+        Client.on('messageReactionRemove', async (reaction, user) => {
  
             if (reaction.message.partial) await reaction.message.fetch();
             if (reaction.partial) await reaction.fetch();

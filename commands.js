@@ -3,7 +3,7 @@ const { Routes } = require('discord-api-types/v9');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const fs = require('node:fs');
 
-const commandRegister = (client) => {
+const commandRegister = (Client) => {
     const commands = [
         new SlashCommandBuilder().setName('ping').setDescription('Replies with pong!'),
         new SlashCommandBuilder().setName('genderrole').setDescription('gender role setting embed'),
