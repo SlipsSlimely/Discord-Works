@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const {AttachmentBuilder, MessageEmbed, Intents, time, ActionRowBuilder, MessageButton, ButtonStyle, MessageActionRow} = require('discord.js');
+const {ButtonBuilder,  SlashCommandBuilder, AttachmentBuilder, MessageEmbed, Intents, time, ActionRowBuilder, MessageButton, ButtonStyle, MessageActionRow} = require('discord.js');
 //const commandList = require('./commands.js');
 const Client = new Discord.Client({intents: ["GUILDS", 'GUILD_MEMBERS', "GUILD_MESSAGES"]});
 require('dotenv').config()
@@ -25,7 +25,7 @@ Client.once('ready',()=>{
 
 
 // Old message command content, no longer needed
-Client.on('messageCreate', async message =>{
+/* Client.on('message', async message =>{
     const { channel } = message
 
     if(!message.content.startsWith(prefix) || message.author.bot) return;
@@ -58,7 +58,7 @@ Client.on('messageCreate', async message =>{
         .setTimestamp();
     message.channel.send(embed);
     }
-});
+}); */
 
 Client.on('interactionCreate', async interaction => {
 
@@ -467,15 +467,11 @@ else if (buttonID === '12') {
 });
 
 Client.on("messageCreate", async message => { 
-    if (message.content.toLowerCase() == "hi cubey"){
-        message.channel.send({
-            content: 'hiii.'
-        })
-    }
-    if (message.content.toLowerCase() === "-createreactionrole") {
+
+    if (message.content.toLowerCase() == "-createreactionrole") {
         if (message.author.bot) return;
   
-        const Mainroles = new MessageActionRow()
+        const Mainrolesrow = new MessageActionRow()
             .addComponents(
               new MessageButton()
                   .setCustomId('1')
@@ -498,7 +494,7 @@ Client.on("messageCreate", async message => {
                   .setLabel('Battle Box')
                   .setStyle('SUCCESS'),
             );
-          const Mainroles2 = new MessageActionRow()
+          const Mainroles2row = new MessageActionRow()
             .addComponents(
               new MessageButton()
                   .setCustomId('6')
@@ -517,7 +513,7 @@ Client.on("messageCreate", async message => {
                   .setLabel('Drafter')
                   .setStyle('SUCCESS'),
             );
-            const Genderroles = new MessageActionRow()
+            const Genderrolesrow = new MessageActionRow()
             .addComponents(
               new MessageButton()
                   .setCustomId('10')
@@ -532,46 +528,46 @@ Client.on("messageCreate", async message => {
                   .setLabel('They/Them')
                   .setStyle('SUCCESS'),
             );
-            const Timeroles = new MessageActionRow()
+            const Timerolesrow = new MessageActionRow()
             .addComponents(
               new MessageButton()
                   .setCustomId('13')
-                  .setLabel('🇺🇸')
+                  .setLabel('North America')
                   .setStyle('SUCCESS')
-                  .setEmoji('🇱🇧'),
+                  .setEmoji('🇺🇸'),
               new MessageButton()
                   .setCustomId('14')
-                  .setLabel('🇺🇾')
+                  .setLabel('South America')
                   .setStyle('SUCCESS')
-                  .setEmoji('🇱🇧'),
+                  .setEmoji('🇺🇾'),
               new MessageButton()
                   .setCustomId('15')
-                  .setLabel('🇫🇷')
+                  .setLabel('Western Europe')
                   .setStyle('SUCCESS')
-                  .setEmoji('🇱🇧'),
+                  .setEmoji('🇫🇷'),
               new MessageButton()
                   .setCustomId('16')
-                  .setLabel('🇷🇺')
+                  .setLabel('Eastern Europe/Russia')
                   .setStyle('SUCCESS')
-                  .setEmoji('🇱🇧'),
+                  .setEmoji('🇷🇺'),
               new MessageButton()
                   .setCustomId('17')
-                  .setLabel('🇿🇦')
+                  .setLabel('Africa')
                   .setStyle('SUCCESS')
-                  .setEmoji('🇱🇧'),
+                  .setEmoji('🇿🇦'),
             );
-          const Timeroles2 = new MessageActionRow()
+          const Timeroles2row = new MessageActionRow()
             .addComponents(
               new MessageButton()
                   .setCustomId('18')
-                  .setLabel('🇯🇵')
+                  .setLabel('Eastern Asia/Pacific Islands')
                   .setStyle('SUCCESS')
-                  .setEmoji('🇱🇧'),
+                  .setEmoji('🇯🇵'),
               new MessageButton()
                   .setCustomId('19')
-                  .setLabel('🇦🇺')
+                  .setLabel('Australia')
                   .setStyle('SUCCESS')
-                  .setEmoji('🇱🇧'),
+                  .setEmoji('🇦🇺'),
               new MessageButton()
                   .setCustomId('20')
                   .setLabel('Middle East')
@@ -579,29 +575,29 @@ Client.on("messageCreate", async message => {
                   .setEmoji('🇱🇧'),
               new MessageButton()
                   .setCustomId('21')
-                  .setLabel('India')
+                  .setLabel('South asia/India')
                   .setStyle('SUCCESS')
                   .setEmoji('🇮🇳'),
             );
         message.channel.send({
             content: 'Please press the button for the role that you would like.',
-            components: [Mainroles]
+            components: [Mainrolesrow]
         })
         message.channel.send({
             content: 'Remember: Drafter can be pinged by other users!',
-            components: [Mainroles2]
+            components: [Mainroles2row]
         })
         message.channel.send({
             content: 'Please only select a role from here if you are comfortable doing so.',
-            components: [Genderroles]
+            components: [Genderrolesrow]
         })
         message.channel.send({
             content: 'These roles are not necessary but can help when setting up IRL drafting.',
-            components: [Timeroles]
+            components: [Timerolesrow]
         })
         message.channel.send({
             content: 'Make sure to select the time zone/region most relevant to you.',
-            components: [Timeroles2]
+            components: [Timeroles2row]
         })
     }
   });
