@@ -1,4 +1,4 @@
-const { REST } = require('@discordjs/rest');
+/* const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const fs = require('node:fs');
@@ -27,4 +27,4 @@ const commandRegister = (Client) => {
         console.error(error);
     }
 };
-exports.commandRegister = commandRegister;
+exports.commandRegister = commandRegister; */

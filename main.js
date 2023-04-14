@@ -1,31 +1,31 @@
-const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
 const {AttachmentBuilder, MessageEmbed, Intents, time, ActionRowBuilder, MessageButton, ButtonStyle, MessageActionRow} = require('discord.js');
+//const commandList = require('./commands.js');
+const Client = new Discord.Client({intents: ["GUILDS", 'GUILD_MEMBERS', "GUILD_MESSAGES"]});
 require('dotenv').config()
-const Client = new Discord.Client({intents: [Intents.FLAGS.GUILDS, "GUILDS", 'GUILD_MEMBERS', "GUILD_MESSAGES"]});
 
-const fs = require('fs');
+
+var fs = require('fs');
+const { waitForDebugger } = require('inspector');
+const { SSL_OP_EPHEMERAL_RSA } = require('constants');
  
-Client.commands = new Discord.Collection();
-
-
-
+/* Client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
  
     Client.commands.set(command.name, command);
-}
+} */
 
 Client.once('ready',()=>{
     console.log('Cube time!')
-    Client.user.setActivity("Deciding on my p1p1"); 
+    Client.user.setActivity("p1p1"); 
 });
 
 
 
 // Old message command content, no longer needed
-/* Client.on('messageCreate', async message =>{
+Client.on('messageCreate', async message =>{
     const { channel } = message
 
     if(!message.content.startsWith(prefix) || message.author.bot) return;
@@ -58,10 +58,9 @@ Client.once('ready',()=>{
         .setTimestamp();
     message.channel.send(embed);
     }
-}); */
+});
 
 Client.on('interactionCreate', async interaction => {
-    
 
     if (interaction.isButton()) {
       const buttonID = interaction.customId;
@@ -468,7 +467,12 @@ else if (buttonID === '12') {
 });
 
 Client.on("messageCreate", async message => { 
-    if (message.content.toLowerCase() == "-createreactionrole") {
+    if (message.content.toLowerCase() == "hi cubey"){
+        message.channel.send({
+            content: 'hiii.'
+        })
+    }
+    if (message.content.toLowerCase() === "-createreactionrole") {
         if (message.author.bot) return;
   
         const Mainroles = new MessageActionRow()
@@ -533,65 +537,76 @@ Client.on("messageCreate", async message => {
               new MessageButton()
                   .setCustomId('13')
                   .setLabel('🇺🇸')
-                  .setStyle('SUCCESS'),
+                  .setStyle('SUCCESS')
+                  .setEmoji('🇱🇧'),
               new MessageButton()
                   .setCustomId('14')
                   .setLabel('🇺🇾')
-                  .setStyle('SUCCESS'),
+                  .setStyle('SUCCESS')
+                  .setEmoji('🇱🇧'),
               new MessageButton()
                   .setCustomId('15')
                   .setLabel('🇫🇷')
-                  .setStyle('SUCCESS'),
+                  .setStyle('SUCCESS')
+                  .setEmoji('🇱🇧'),
               new MessageButton()
                   .setCustomId('16')
                   .setLabel('🇷🇺')
-                  .setStyle('SUCCESS'),
+                  .setStyle('SUCCESS')
+                  .setEmoji('🇱🇧'),
               new MessageButton()
                   .setCustomId('17')
                   .setLabel('🇿🇦')
-                  .setStyle('SUCCESS'),
+                  .setStyle('SUCCESS')
+                  .setEmoji('🇱🇧'),
             );
           const Timeroles2 = new MessageActionRow()
             .addComponents(
               new MessageButton()
                   .setCustomId('18')
                   .setLabel('🇯🇵')
-                  .setStyle('SUCCESS'),
+                  .setStyle('SUCCESS')
+                  .setEmoji('🇱🇧'),
               new MessageButton()
                   .setCustomId('19')
                   .setLabel('🇦🇺')
-                  .setStyle('SUCCESS'),
+                  .setStyle('SUCCESS')
+                  .setEmoji('🇱🇧'),
               new MessageButton()
                   .setCustomId('20')
-                  .setLabel('🇱🇧')
-                  .setStyle('SUCCESS'),
+                  .setLabel('Middle East')
+                  .setStyle('SUCCESS')
+                  .setEmoji('🇱🇧'),
               new MessageButton()
                   .setCustomId('21')
-                  .setLabel('🇮🇳')
-                  .setStyle('SUCCESS'),
+                  .setLabel('India')
+                  .setStyle('SUCCESS')
+                  .setEmoji('🇮🇳'),
             );
         message.channel.send({
             content: 'Please press the button for the role that you would like.',
             components: [Mainroles]
         })
         message.channel.send({
-          content: 'Remember: Drafter can be pinged by other users!',
-          components: [Mainroles2]
-      })
-      message.channel.send({
-        content: 'Please only select a role from here if you are comfortable doing so.',
-        components: [Genderroles]
-    })
-    message.channel.send({
-        content: 'These roles are not necessary but can help when setting up IRL drafting.',
-        components: [Timeroles]
-    })
-    message.channel.send({
-        content: 'Make sure to select the time zone/region most relevant to you.',
-        components: [Timeroles2]
-    })
+            content: 'Remember: Drafter can be pinged by other users!',
+            components: [Mainroles2]
+        })
+        message.channel.send({
+            content: 'Please only select a role from here if you are comfortable doing so.',
+            components: [Genderroles]
+        })
+        message.channel.send({
+            content: 'These roles are not necessary but can help when setting up IRL drafting.',
+            components: [Timeroles]
+        })
+        message.channel.send({
+            content: 'Make sure to select the time zone/region most relevant to you.',
+            components: [Timeroles2]
+        })
     }
   });
+
+
 
 
 
