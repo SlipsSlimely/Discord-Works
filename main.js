@@ -70,14 +70,14 @@ Client.on('interactionCreate', async interaction => {
 
           
 
-          if (member.roles.cache.has('472500301279133697')) { // if they already have the role
-              member.roles.remove('472500301279133697'); // remove it
+          if (member.roles.cache.has('545082632762032129')) { // if they already have the role
+              member.roles.remove('545082632762032129'); // remove it
               return interaction.reply({
                   content: 'Successfully removed role!',
                   ephemeral: true
               });
           } else { // if they don't have the role
-              member.roles.add('472500301279133697'); // add it
+              member.roles.add('545082632762032129'); // add it
               return interaction.reply({
                   content: 'Successfully added role!',
                   ephemeral: true
@@ -89,14 +89,14 @@ Client.on('interactionCreate', async interaction => {
 
         
 
-        if (member.roles.cache.has('763914397881466901')) { // if they already have the role
-            member.roles.remove('763914397881466901'); // remove it
+        if (member.roles.cache.has('545082678936993793')) { // if they already have the role
+            member.roles.remove('545082678936993793'); // remove it
             return interaction.reply({
                 content: 'Successfully removed role!',
                 ephemeral: true
             });
         } else { // if they don't have the role
-            member.roles.add('763914397881466901'); // add it
+            member.roles.add('545082678936993793'); // add it
             return interaction.reply({
                 content: 'Successfully added role!',
                 ephemeral: true
@@ -108,14 +108,14 @@ Client.on('interactionCreate', async interaction => {
 
       
 
-      if (member.roles.cache.has('593883972652498968')) { // if they already have the role
-          member.roles.remove('593883972652498968'); // remove it
+      if (member.roles.cache.has('545083386662879250')) { // if they already have the role
+          member.roles.remove('545083386662879250'); // remove it
           return interaction.reply({
               content: 'Successfully removed role!',
               ephemeral: true
           });
       } else { // if they don't have the role
-          member.roles.add('593883972652498968'); // add it
+          member.roles.add('545083386662879250'); // add it
           return interaction.reply({
               content: 'Successfully added role!',
               ephemeral: true
@@ -127,14 +127,14 @@ Client.on('interactionCreate', async interaction => {
 
     
 
-    if (member.roles.cache.has('603693326905901096')) { // if they already have the role
-        member.roles.remove('603693326905901096'); // remove it
+    if (member.roles.cache.has('545083350214508544')) { // if they already have the role
+        member.roles.remove('545083350214508544'); // remove it
         return interaction.reply({
             content: 'Successfully removed role!',
             ephemeral: true
         });
     } else { // if they don't have the role
-        member.roles.add('603693326905901096'); // add it
+        member.roles.add('545083350214508544'); // add it
         return interaction.reply({
             content: 'Successfully added role!',
             ephemeral: true
@@ -146,14 +146,14 @@ else if (buttonID === '5') {
 
   
 
-  if (member.roles.cache.has('700804945699536916')) { // if they already have the role
-      member.roles.remove('700804945699536916'); // remove it
+  if (member.roles.cache.has('405425048372117506')) { // if they already have the role
+      member.roles.remove('405425048372117506'); // remove it
       return interaction.reply({
           content: 'Successfully removed role!',
           ephemeral: true
       });
   } else { // if they don't have the role
-      member.roles.add('700804945699536916'); // add it
+      member.roles.add('405425048372117506'); // add it
       return interaction.reply({
           content: 'Successfully added role!',
           ephemeral: true
@@ -165,14 +165,14 @@ else if (buttonID === '6') {
 
   
 
-  if (member.roles.cache.has('578353610388406312')) { // if they already have the role
-      member.roles.remove('578353610388406312'); // remove it
+  if (member.roles.cache.has('892908568477597736')) { // if they already have the role
+      member.roles.remove('892908568477597736'); // remove it
       return interaction.reply({
           content: 'Successfully removed role!',
           ephemeral: true
       });
   } else { // if they don't have the role
-      member.roles.add('578353610388406312'); // add it
+      member.roles.add('892908568477597736v'); // add it
       return interaction.reply({
           content: 'Successfully added role!',
           ephemeral: true
@@ -184,14 +184,14 @@ else if (buttonID === '7') {
 
 
 
-  if (member.roles.cache.has('757061544671445012')) { // if they already have the role
-      member.roles.remove('757061544671445012'); // remove it
+  if (member.roles.cache.has('545084057558450185')) { // if they already have the role
+      member.roles.remove('545084057558450185'); // remove it
       return interaction.reply({
           content: 'Successfully removed role!',
           ephemeral: true
       });
   } else { // if they don't have the role
-      member.roles.add('757061544671445012'); // add it
+      member.roles.add('545084057558450185'); // add it
       return interaction.reply({
           content: 'Successfully added role!',
           ephemeral: true
@@ -203,14 +203,14 @@ else if (buttonID === '8') {
 
  
 
-  if (member.roles.cache.has('873233003705426001')) { // if they already have the role
-      member.roles.remove('873233003705426001'); // remove it
+  if (member.roles.cache.has('545084122838597652')) { // if they already have the role
+      member.roles.remove('545084122838597652'); // remove it
       return interaction.reply({
           content: 'Successfully removed role!',
           ephemeral: true
       });
   } else { // if they don't have the role
-      member.roles.add('873233003705426001'); // add it
+      member.roles.add('545084122838597652'); // add it
       return interaction.reply({
           content: 'Successfully added role!',
           ephemeral: true
@@ -222,14 +222,14 @@ else if (buttonID === '9') {
 
 
 
-  if (member.roles.cache.has('903010664564555796')) { // if they already have the role
-      member.roles.remove('903010664564555796'); // remove it
+  if (member.roles.cache.has('802835212982943755')) { // if they already have the role
+      member.roles.remove('802835212982943755'); // remove it
       return interaction.reply({
           content: 'Successfully removed role!',
           ephemeral: true
       });
   } else { // if they don't have the role
-      member.roles.add('903010664564555796'); // add it
+      member.roles.add('802835212982943755'); // add it
       return interaction.reply({
           content: 'Successfully added role!',
           ephemeral: true
@@ -241,14 +241,14 @@ else if (buttonID === '10') {
 
 
 
-  if (member.roles.cache.has('956587965704962098')) { // if they already have the role
-      member.roles.remove('956587965704962098'); // remove it
+  if (member.roles.cache.has('796905065318973472')) { // if they already have the role
+      member.roles.remove('796905065318973472'); // remove it
       return interaction.reply({
           content: 'Successfully removed role!',
           ephemeral: true
       });
   } else { // if they don't have the role
-      member.roles.add('956587965704962098'); // add it
+      member.roles.add('796905065318973472'); // add it
       return interaction.reply({
           content: 'Successfully added role!',
           ephemeral: true
@@ -260,26 +260,342 @@ else if (buttonID === '11') {
 
 
 
-  if (member.roles.cache.has('1025577232212701305')) { // if they already have the role
-      member.roles.remove('1025577232212701305'); // remove it
+  if (member.roles.cache.has('796905157253922829')) { // if they already have the role
+      member.roles.remove('796905157253922829'); // remove it
       return interaction.reply({
           content: 'Successfully removed role!',
           ephemeral: true
       });
   } else { // if they don't have the role
-      member.roles.add('1025577232212701305'); // add it
+      member.roles.add('796905157253922829'); // add it
       return interaction.reply({
           content: 'Successfully added role!',
           ephemeral: true
       })
   }
 }
+else if (buttonID === '12') { 
+    const member = interaction.member; // get member from the interaction - person who clicked the button
+  
+  
+  
+    if (member.roles.cache.has('796905203936395274')) { // if they already have the role
+        member.roles.remove('796905203936395274'); // remove it
+        return interaction.reply({
+            content: 'Successfully removed role!',
+            ephemeral: true
+        });
+    } else { // if they don't have the role
+        member.roles.add('1025577232212701305'); // add it
+        return interaction.reply({
+            content: 'Successfully added role!',
+            ephemeral: true
+        })
+    }
+  }
+  else if (buttonID === '13') { 
+    const member = interaction.member; // get member from the interaction - person who clicked the button
+  
+  
+  
+    if (member.roles.cache.has('888135872892006421')) { // if they already have the role
+        member.roles.remove('888135872892006421'); // remove it
+        return interaction.reply({
+            content: 'Successfully removed role!',
+            ephemeral: true
+        });
+    } else { // if they don't have the role
+        member.roles.add('888135872892006421'); // add it
+        return interaction.reply({
+            content: 'Successfully added role!',
+            ephemeral: true
+        })
+    }
+  }
+  else if (buttonID === '14') { 
+    const member = interaction.member; // get member from the interaction - person who clicked the button
+  
+  
+  
+    if (member.roles.cache.has('888135926327427132')) { // if they already have the role
+        member.roles.remove('888135926327427132'); // remove it
+        return interaction.reply({
+            content: 'Successfully removed role!',
+            ephemeral: true
+        });
+    } else { // if they don't have the role
+        member.roles.add('888135926327427132'); // add it
+        return interaction.reply({
+            content: 'Successfully added role!',
+            ephemeral: true
+        })
+    }
+  }
+  else if (buttonID === '15') { 
+    const member = interaction.member; // get member from the interaction - person who clicked the button
+  
+  
+  
+    if (member.roles.cache.has('888136080740716625')) { // if they already have the role
+        member.roles.remove('888136080740716625'); // remove it
+        return interaction.reply({
+            content: 'Successfully removed role!',
+            ephemeral: true
+        });
+    } else { // if they don't have the role
+        member.roles.add('888136080740716625'); // add it
+        return interaction.reply({
+            content: 'Successfully added role!',
+            ephemeral: true
+        })
+    }
+  }
+  else if (buttonID === '16') { 
+    const member = interaction.member; // get member from the interaction - person who clicked the button
+  
+  
+  
+    if (member.roles.cache.has('888136154103296041')) { // if they already have the role
+        member.roles.remove('888136154103296041'); // remove it
+        return interaction.reply({
+            content: 'Successfully removed role!',
+            ephemeral: true
+        });
+    } else { // if they don't have the role
+        member.roles.add('888136154103296041'); // add it
+        return interaction.reply({
+            content: 'Successfully added role!',
+            ephemeral: true
+        })
+    }
+  }
+  else if (buttonID === '17') { 
+    const member = interaction.member; // get member from the interaction - person who clicked the button
+  
+  
+  
+    if (member.roles.cache.has('888136240740859955')) { // if they already have the role
+        member.roles.remove('888136240740859955'); // remove it
+        return interaction.reply({
+            content: 'Successfully removed role!',
+            ephemeral: true
+        });
+    } else { // if they don't have the role
+        member.roles.add('888136240740859955'); // add it
+        return interaction.reply({
+            content: 'Successfully added role!',
+            ephemeral: true
+        })
+    }
+  }
+  else if (buttonID === '18') { 
+    const member = interaction.member; // get member from the interaction - person who clicked the button
+  
+  
+  
+    if (member.roles.cache.has('888136315823075348')) { // if they already have the role
+        member.roles.remove('888136315823075348'); // remove it
+        return interaction.reply({
+            content: 'Successfully removed role!',
+            ephemeral: true
+        });
+    } else { // if they don't have the role
+        member.roles.add('888136315823075348'); // add it
+        return interaction.reply({
+            content: 'Successfully added role!',
+            ephemeral: true
+        })
+    }
+  }
+  else if (buttonID === '19') { 
+    const member = interaction.member; // get member from the interaction - person who clicked the button
+  
+  
+  
+    if (member.roles.cache.has('888136382411845642')) { // if they already have the role
+        member.roles.remove('888136382411845642'); // remove it
+        return interaction.reply({
+            content: 'Successfully removed role!',
+            ephemeral: true
+        });
+    } else { // if they don't have the role
+        member.roles.add('888136382411845642'); // add it
+        return interaction.reply({
+            content: 'Successfully added role!',
+            ephemeral: true
+        })
+    }
+  }
+  else if (buttonID === '20') { 
+    const member = interaction.member; // get member from the interaction - person who clicked the button
+  
+  
+  
+    if (member.roles.cache.has('888136541115932734')) { // if they already have the role
+        member.roles.remove('888136541115932734'); // remove it
+        return interaction.reply({
+            content: 'Successfully removed role!',
+            ephemeral: true
+        });
+    } else { // if they don't have the role
+        member.roles.add('888136541115932734'); // add it
+        return interaction.reply({
+            content: 'Successfully added role!',
+            ephemeral: true
+        })
+    }
+  }
+  else if (buttonID === '21') { 
+    const member = interaction.member; // get member from the interaction - person who clicked the button
+  
+  
+  
+    if (member.roles.cache.has('888137489586475008')) { // if they already have the role
+        member.roles.remove('888137489586475008'); // remove it
+        return interaction.reply({
+            content: 'Successfully removed role!',
+            ephemeral: true
+        });
+    } else { // if they don't have the role
+        member.roles.add('888137489586475008'); // add it
+        return interaction.reply({
+            content: 'Successfully added role!',
+            ephemeral: true
+        })
+    }
+  }
 }
 });
 
+Client.on("messageCreate", async message => { 
+    if (message.content.toLowerCase() == "-createreactionrole") {
+        if (message.author.bot) return;
+  
+        const Mainroles = new MessageActionRow()
+            .addComponents(
+              new MessageButton()
+                  .setCustomId('1')
+                  .setLabel('Powered')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('2')
+                  .setLabel('Unpowered Traditional')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('3')
+                  .setLabel('Unpowered Themed')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('4')
+                  .setLabel('Multiplayer')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('5')
+                  .setLabel('Battle Box')
+                  .setStyle('SUCCESS'),
+            );
+          const Mainroles2 = new MessageActionRow()
+            .addComponents(
+              new MessageButton()
+                  .setCustomId('6')
+                  .setLabel('Jumpstart')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('7')
+                  .setLabel('Peasant')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('8')
+                  .setLabel('Pauper')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('9')
+                  .setLabel('Drafter')
+                  .setStyle('SUCCESS'),
+            );
+            const Genderroles = new MessageActionRow()
+            .addComponents(
+              new MessageButton()
+                  .setCustomId('10')
+                  .setLabel('He/Him')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('11')
+                  .setLabel('She/Her')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('12')
+                  .setLabel('They/Them')
+                  .setStyle('SUCCESS'),
+            );
+            const Timeroles = new MessageActionRow()
+            .addComponents(
+              new MessageButton()
+                  .setCustomId('13')
+                  .setLabel('🇺🇸')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('14')
+                  .setLabel('🇺🇾')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('15')
+                  .setLabel('🇫🇷')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('16')
+                  .setLabel('🇷🇺')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('17')
+                  .setLabel('🇿🇦')
+                  .setStyle('SUCCESS'),
+            );
+          const Timeroles2 = new MessageActionRow()
+            .addComponents(
+              new MessageButton()
+                  .setCustomId('18')
+                  .setLabel('🇯🇵')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('19')
+                  .setLabel('🇦🇺')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('20')
+                  .setLabel('🇱🇧')
+                  .setStyle('SUCCESS'),
+              new MessageButton()
+                  .setCustomId('21')
+                  .setLabel('🇮🇳')
+                  .setStyle('SUCCESS'),
+            );
+        message.channel.send({
+            content: 'Please press the button for the role that you would like.',
+            components: [Mainroles]
+        })
+        message.channel.send({
+          content: 'Remember: Drafter can be pinged by other users!',
+          components: [Mainroles2]
+      })
+      message.channel.send({
+        content: 'Please only select a role from here if you are comfortable doing so.',
+        components: [Genderroles]
+    })
+    message.channel.send({
+        content: 'These roles are not necessary but can help when setting up IRL drafting.',
+        components: [Timeroles]
+    })
+    message.channel.send({
+        content: 'Make sure to select the time zone/region most relevant to you.',
+        components: [Timeroles2]
+    })
+    }
+  });
 
 
 
-ee
+
+
 
 client.login(process.env.TOKEN);
