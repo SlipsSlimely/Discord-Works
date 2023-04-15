@@ -171,7 +171,7 @@ else if (buttonID === '6') {
           ephemeral: true
       });
   } else { // if they don't have the role
-      member.roles.add('892908568477597736v'); // add it
+      member.roles.add('892908568477597736'); // add it
       return interaction.reply({
           content: 'Successfully added role!',
           ephemeral: true
@@ -285,7 +285,7 @@ else if (buttonID === '12') {
             ephemeral: true
         });
     } else { // if they don't have the role
-        member.roles.add('1025577232212701305'); // add it
+        member.roles.add('796905203936395274'); // add it
         return interaction.reply({
             content: 'Successfully added role!',
             ephemeral: true
@@ -584,7 +584,7 @@ Client.on("messageCreate", async message => {
             components: [Mainrolesrow]
         })
         message.channel.send({
-            content: 'Remember: Drafter can be pinged by other users!',
+            content: 'Remember: Drafter and Multiplayer can be pinged by other users!',
             components: [Mainroles2row]
         })
         message.channel.send({
